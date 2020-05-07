@@ -1,0 +1,10 @@
+SCENE
+NAME: test1
+OBJECTS
+COUNT:1
+GAMEOBJECT
+MESH: cyl1.obj
+SHADER: model.shader
+POSITION: 0 0 0
+SCALE: 0.8 0.8 0.8
+

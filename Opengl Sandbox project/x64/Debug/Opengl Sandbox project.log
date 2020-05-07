@@ -1,0 +1,7 @@
+﻿  Opengl Sandbox project.cpp
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\Opengl Sandbox project.cpp(171,49): warning C4305: 'argument': truncation from 'double' to 'T'
+          with
+          [
+              T=float
+          ]
+  Opengl Sandbox project.vcxproj -> C:\Users\JohnPower\source\repos\Opengl Sandbox project\x64\Debug\Opengl Sandbox project.exe
