@@ -93,7 +93,7 @@ Shader::Shader(const std::string filepath) {
 	glDeleteShader(fragmentShader);
 }
 
-void Shader::setUniformVec3(const GLchar* name, glm::vec3& color) const {
+void Shader::setUniformVec3(const GLchar* name, const glm::vec3& color) const {
 	bind();
 	int loc = glGetUniformLocation(id, name);
 	if (loc == -1) {

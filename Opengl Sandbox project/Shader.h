@@ -16,7 +16,7 @@ public:
 	unsigned int id;
 	Shader();
 	Shader(const std::string filepath);
-	void setUniformVec3(const GLchar* name, glm::vec3& color) const;
+	void setUniformVec3(const GLchar* name, const glm::vec3& color) const;
 	void setUniform4m(const GLchar* name, const glm::mat4& mat) const;
 	void setUniform1f(const GLchar* name, GLfloat var) const;
 

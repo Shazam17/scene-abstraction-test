@@ -1,7 +1,9 @@
 ﻿  Opengl Sandbox project.cpp
-C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\Opengl Sandbox project.cpp(171,49): warning C4305: 'argument': truncation from 'double' to 'T'
-          with
-          [
-              T=float
-          ]
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\BoundingBox.h(79,1): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\BoundingBox.h(99,1): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\BoundingBox.h(123,32): warning C4101: 'e': unreferenced local variable
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\GizmoDrawer.h(38,1): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\SciptTest.h(22,1): warning C4305: '=': truncation from 'double' to 'float'
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\Opengl Sandbox project.cpp(552,15): warning C4099: 'Object': type name first seen using 'class' now seen using 'struct'
+C:\Users\JohnPower\source\repos\Opengl Sandbox project\Opengl Sandbox project\Opengl Sandbox project.cpp(552): message : see declaration of 'Object'
   Opengl Sandbox project.vcxproj -> C:\Users\JohnPower\source\repos\Opengl Sandbox project\x64\Debug\Opengl Sandbox project.exe

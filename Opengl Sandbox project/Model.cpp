@@ -1,8 +1,11 @@
 #include "Model.h"
 
-Model::Model(const std::vector<Vertex>& v, const std::vector<unsigned>& i) {
 
+Model::Model(const std::vector<Vertex>& v, const std::vector<unsigned>& i, const std::vector<Triangle>& tr = {}) {
 
+	vertices = v;
+	indices = i;
+	faces = tr;
 	count = i.size();
 	glGenVertexArrays(1, &vao);
 	glBindVertexArray(vao);
@@ -19,10 +22,13 @@ Model::Model(const std::vector<Vertex>& v, const std::vector<unsigned>& i) {
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
 }
 
+
+
 Model Model::loadObj(const std::string& path) {
 
 	std::vector<Vertex> v;
 	std::vector<unsigned> i;
+	std::vector<Triangle> tr;
 
 	std::ifstream file;
 	try {
@@ -81,13 +87,14 @@ Model Model::loadObj(const std::string& path) {
 				i.push_back(t[0]);
 				i.push_back(t[3]);
 				i.push_back(t[6]);
+				tr.push_back(Triangle(t[0], t[3], t[6]));
 			}
 
 		}
 	}
 
 
-	return Model(v, i);
+	return Model(v, i,tr);
 }
 
 void Model::draw(const Shader& shad) const {

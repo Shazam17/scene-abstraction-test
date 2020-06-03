@@ -31,7 +31,7 @@ void OrbitCamera::processMouseMove(const Application& app) {
 
 
 		theta -= pos.x * 0.01;
-		fi += pos.y * 0.01;
+		fi -= pos.y * 0.01;
 
 		if (fi < 0) {
 			fi = 0.01;
@@ -45,11 +45,17 @@ void OrbitCamera::processMouseMove(const Application& app) {
 
 }
 
-glm::mat4 OrbitCamera::getViewMat() {
+glm::vec3 OrbitCamera::getPos() const
+{
+	return pos;
+}
 
+glm::mat4 OrbitCamera::getViewMat(const Application& app) {
+	radius = 2.0 - app.scrollOffset * 0.1;
 	float X = -radius * cos(theta) * sin(fi);
 	float Y = radius * cos(fi);
 	float Z = radius * sin(theta) * sin(fi);
+	pos = glm::vec3(X, Y, Z);
 	view = glm::lookAt(glm::vec3(X, Y, Z), glm::vec3(0), glm::vec3(0, 1, 0));
 	return view;
 }
